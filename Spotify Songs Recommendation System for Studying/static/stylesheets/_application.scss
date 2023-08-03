@@ -1,0 +1,274 @@
+
+.application {
+    background: #fff;
+    border-radius: 1.75rem;
+    overflow: hidden;
+
+    .application-body {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: .5s grid-template-rows;
+    }
+
+    .artists {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .artist {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: .5rem;
+        transition: .5s;
+        border-radius: .5rem;
+
+        .artist-image {
+            flex-shrink: 0;
+            display: flex;
+            place-content: center;
+            place-items: center;
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            background-color: #282828;
+            object-fit: cover;
+            object-position: center;
+            color: #fffc;
+            font-size: 1.5rem;
+        }
+
+        .artist-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .artist-tags {
+            font-size: .5rem;
+            color: #808080;
+        }
+
+        .select-artist {
+            display: flex;
+            place-items: center;
+            place-content: center;
+            width: 2rem;
+            height: 2rem;
+            padding: 0;
+            padding-left: .15rem;
+            border: 0;
+            border-radius: 50%;
+            background-color: transparent;
+            color: transparent;
+            font-size: 1.2rem;
+            transition: .25s;
+
+            &:focus {
+                color: #e0e0e0;
+            }
+        }
+
+        &:hover {
+            background-color: #f8f8f8;
+
+            .select-artist {
+                color: #e0e0e0;
+                cursor: pointer;
+
+                &:hover {
+                    color: #c8c8c8;
+                    background-color: #e0e0e0;
+                }
+
+                &:active {
+                    color: #c0c0c0;
+                    background-color: #d8d8d8;
+                }
+            }
+        }
+    }
+
+    .artist-details {
+        flex-direction: column;
+        text-align: center;
+
+        .artist-image {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        .track-name {
+            font-size: 1.2rem;
+        }
+
+        .track-artist {
+            align-items: center;
+        }
+
+        &:hover {
+            background-color: unset;
+            box-shadow: none;
+        }
+    }
+
+    .tracks {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .track {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: .5rem;
+        transition: .5s;
+        border-radius: .5rem;
+
+        &:hover {
+            background-color: #f8f8f8;
+        }
+
+        .play-track {
+            flex-shrink: 0;
+            display: flex;
+            place-content: center;
+            place-items: center;
+            width: 4rem;
+            height: 4rem;
+            border: 0;
+            border-radius: 8px;
+            background-color: #282828;
+            position: relative;
+            color: #fffc;
+            font-size: 1.5rem;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: .2;
+                object-fit: cover;
+            }
+        }
+
+        .track-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .track-artist{
+            font-size: .75rem;
+            color: #808080;
+        }
+
+        .track-album {
+            font-size: .75rem;
+        }
+    }
+    
+
+    .playlists {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .playlist {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: .5rem;
+        transition: .5s;
+        border-radius: .5rem;
+
+        a {
+            font-size: .8rem;
+        }
+
+        .playlist-image {
+            flex-shrink: 0;
+            display: flex;
+            place-content: center;
+            place-items: center;
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            background-color: #282828;
+            object-fit: cover;
+            object-position: center;
+            color: #fffc;
+            font-size: 1.5rem;
+        }
+
+        .playlist-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .playlist-tags {
+            font-size: .5rem;
+            color: #808080;
+        }
+
+        .select-playlist {
+            display: flex;
+            place-items: center;
+            place-content: center;
+            width: 2rem;
+            height: 2rem;
+            padding: 0;
+            padding-left: .15rem;
+            border: 0;
+            border-radius: 50%;
+            background-color: transparent;
+            color: transparent;
+            font-size: 1.2rem;
+            transition: .25s;
+
+            &:focus {
+                color: #e0e0e0;
+            }
+        }
+
+        &:hover {
+            background-color: #f8f8f8;
+
+            .select-playlist {
+                color: #e0e0e0;
+                cursor: pointer;
+
+                &:hover {
+                    color: #c8c8c8;
+                    background-color: #e0e0e0;
+                }
+
+                &:active {
+                    color: #c0c0c0;
+                    background-color: #d8d8d8;
+                }
+            }
+        }
+    }
+
+    .scroll-hint {
+        margin: 1rem .5rem .5rem;
+        font-size: .8rem;
+        color: #a0a0a0;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .hint {
+        text-align: center;
+        font-weight: 300;
+    }
+}

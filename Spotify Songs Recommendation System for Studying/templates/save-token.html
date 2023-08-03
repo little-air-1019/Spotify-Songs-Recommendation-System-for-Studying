@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Successful</title>
+</head>
+
+<body style="display: flex; height: 100vh; margin: 0;">
+    <div style="margin: auto; text-align: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="width: 10rem; max-width: calc(100vw - 4rem)">
+            <path fill="#c8e6c9" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z" />
+            <path fill="#4caf50"
+                d="M34.586,14.586l-13.57,13.586l-5.602-5.586l-2.828,2.828l8.434,8.414l16.395-16.414L34.586,14.586z" />
+        </svg>
+        <h1 style="font-weight: 400; font-size: 2rem; margin: 0;">登入成功</h1>
+        <h2 style="font-weight: 400; font-size: 1.5rem; margin: 0;">請誤關閉此頁面</h2>
+    </div>
+    <script>
+        localStorage.setItem('token', '{{ token }}')
+    </script>
+</body>
+
+</html>

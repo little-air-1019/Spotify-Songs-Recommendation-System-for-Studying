@@ -1,0 +1,77 @@
+%icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    -webkit-mask-image: var(--icon);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: var(--icon);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    --scaleX: 1;
+    --scaleY: 1;
+    transform: scale(var(--scaleX), var(--scaleY));
+
+    &.flip-horizontal {
+        --scaleX: -1;
+    }
+}
+
+.search-icon {
+    @extend %icon;
+    --icon: url('/static/images/search-icon.svg');
+}
+
+.artist-icon {
+    @extend %icon;
+    --icon: url('/static/images/artist-icon.svg');
+}
+
+.play-icon {
+    @extend %icon;
+    --icon: url('/static/images/play-icon.svg');
+}
+
+.external-link-icon {
+    @extend %icon;
+    --icon: url('/static/images/external-link-icon.svg');
+}
+
+.left-arrow-icon {
+    @extend %icon;
+    --icon: url('/static/images/left-arrow-icon.svg');
+}
+
+.music-icon {
+    @extend %icon;
+    --icon: url('/static/images/music-icon.svg');
+}
+
+.playlist-icon {
+    @extend %icon;
+    --icon: url('/static/images/playlist-icon.svg');
+}
+
+.pause-icon {
+    @extend %icon;
+    --icon: url('/static/images/pause-icon.svg');
+}
+
+.retry-icon {
+    @extend %icon;
+    --icon: url('/static/images/retry-icon.svg');
+}
+
+.ban-icon {
+    @extend %icon;
+    --icon: url('/static/images/ban-icon.svg');
+}
+
+.spotify-icon {
+    @extend %icon;
+    --icon: url('/static/images/spotify-icon.svg');
+}
